@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+      <div id="container">
+
+<div class="cards">
+<p><%=data.country %></p>
+<p><%=data.totalconfirmed %></p>
+<p><%=data.totaldeaths %></p>
+<p><%=data.totalrecovered %></p>
+<p><%=data.date %></p>
+<form action="/detail/<%=data.id%>?method=delete" method="POST">
+<button>Delete</button>
+</form>
+<form action="/detail/<%=data.id %>?method=put" method="POST">
+    <input type="text" name="country" value="<%=data.country%>">
+    <input type="text" name="totalconfirmed" value="<%=data.totalconfirmed%>">
+    <input type="text" name="totaldeaths" value="<%=data.totaldeaths%>">
+    <input type="text" name="totalrecovered" value="<%=data.totalrecovered%>">
+    <input type="text" name="date" value="<%=data.date%>">
+    <button type="submit">Update</button>
+</form>
+
+</div>
+
+      </div>
+
+    </main>
+
+</body>
+</html>

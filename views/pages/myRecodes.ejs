@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<main>
+
+    <div id="container">
+        <% data.forEach(ele => { %>
+            <div class="cards">
+                <p><%=ele.country %> </p>
+                <p><%=ele.date %> </p>
+                <form action="/detail/<%=ele.id %> " method="GET">
+                <button>View-Details</button>
+                </form>
+            </div>
+         
+        <% }) %>
+        
+        
+                </div>
+
+</main>
+
+</body>
+</html>

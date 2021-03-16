@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <main>
+        <div id="container">
+            <% data.forEach(ele => { %>
+                <div class="cards">
+                    <p><%=ele.country %> </p>
+                    <p><%=ele.totalconfirmed %> </p>
+                    <p><%=ele.totaldeaths %> </p>
+                    <p><%=ele.totalrecovered %> </p>
+                    <p><%=ele.date %> </p>
+            <form action="/saving" method="POST">
+                <input type="hidden" name="country" value="<%=ele.country %>">
+                <input type="hidden" name="totalconfirmed" value="<%=ele.totalconfirmed %>">
+                <input type="hidden" name="totaldeaths" value="<%=ele.totaldeaths %>">
+                <input type="hidden" name="totalrecovered" value="<%=ele.totalrecovered %>">
+                <input type="hidden" name="date" value="<%=ele.date %>">
+                <button>add-to-my-records</button>
+                </form>
+                </div>
+             
+            <% }) %>
+            
+            
+                    </div>
+    </main>
+</body>
+</html>

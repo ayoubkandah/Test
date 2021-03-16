@@ -5,7 +5,7 @@ const superagent = require("superagent")
 const override = require("method-override")
 require("dotenv").config()
 const app = server()
-const port = 1250
+const port = process.env.PORT
 app.use(server.static("./public"))
 app.set("view engine", "ejs")
 app.use(server.urlencoded({ extended: true }))
